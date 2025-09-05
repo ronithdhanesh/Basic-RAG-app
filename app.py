@@ -11,7 +11,7 @@ from langchain.chains.combine_documents import create_stuff_documents_chain
 
 
 st.title("RAG Project")
-api_key = st.secrets("GOOGLE_API_KEY")
+api_key = st.secrets["GOOGLE_API_KEY"]
 llm = GoogleGenerativeAI(model="gemini-1.5-flash", api_key=api_key)
 
 prompt = ChatPromptTemplate.from_template("""
